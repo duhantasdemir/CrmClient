@@ -6,6 +6,9 @@ import { environment } from 'src/environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class girisService {
+  getUserDetails(Email: any, password: any) {
+    throw new Error('Method not implemented.');
+  }
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
@@ -23,8 +26,8 @@ export class girisService {
         return data;
       });
   }
-  postEkle(giris:GirisComponent){
-    return this.httpClient.post(this.baseURL + 'login/Post',giris,this.httpOptions);
+  postEkle(Email:string,password:string){
+    return this.httpClient.post(this.baseURL + 'login/Post',{EMail:Email,Password:password},this.httpOptions);
      }
 
   getAll() {
