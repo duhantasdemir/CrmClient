@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./giris.component.scss']
 })
 export class GirisComponent {
-
-  
-
+ t:string  = "Hello World";
 }
 
 
