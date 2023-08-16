@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PersonelHomeComponent } from './personel-home.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from "../../../layout/components/components.module";
-
+import { TableModule } from 'primeng/table';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { ComponentsModule } from "../../../layout/components/components.module";
         PersonelHomeComponent,
     ],
     imports: [
-        CommonModule,
+        CommonModule,TableModule,
         RouterModule.forChild([
             { path: "", component: PersonelHomeComponent }
         ]),
