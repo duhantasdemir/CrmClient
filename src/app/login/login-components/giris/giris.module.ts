@@ -16,5 +16,4 @@ import { RouterModule } from '@angular/router';
     ])
   ]
 })
-export class GirisModule { }
-
+export class GirisModule {}
