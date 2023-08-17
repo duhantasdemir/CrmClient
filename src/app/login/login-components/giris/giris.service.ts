@@ -5,12 +5,13 @@ import { Observable, firstValueFrom } from 'rxjs';
   providedIn: 'root'
  })
 export class girisService {
- httpClientService: any;
+ httpClient: any;
 
  async login(email: string, password: string ) {
-   const observable: Observable<any> = this.httpClientService.post({
+   const observable: Observable<any> = this.httpClient.post({
       controller: "users",
       action: "login",
+
     }, { email, password } )
 
     await firstValueFrom(observable)
