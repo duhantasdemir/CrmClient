@@ -12,6 +12,8 @@ export class GirisComponent implements OnInit {
   Email! : string ;
   password! :string ;
   username! : string; */
+  username! : string;
+  password! :string;
   profileForm: FormGroup;
   isLoading: boolean = false;
 
@@ -33,7 +35,8 @@ export class GirisComponent implements OnInit {
 
   
   login()  {
-    console.log(this.login)
+    console.log(this.username);
+    console.log(this.password);
     if (this.profileForm.valid) {
     this.isLoading = true;
   //   this.girisService.postEkle(this.model.Email, this.model.password).subscribe((res : any)=>{
