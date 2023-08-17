@@ -3,12 +3,10 @@ import { Injectable } from '@angular/core';
 import { GirisComponent } from './giris.component';
 import { HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { login } from './giris';
 
 @Injectable({ providedIn: 'root' })
 export class girisService {
-  getUserDetails(Email: any, password: any) {
-    throw new Error('Method not implemented.');
-  }
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json'
@@ -26,8 +24,8 @@ export class girisService {
         return data;
       });
   }
-  postEkle(Email:string,password:string){
-    return this.httpClient.post(this.baseURL + 'login/Post',{EMail:Email,Password:password},this.httpOptions);
+  postEkle(login:login){
+    return this.httpClient.post(this.baseURL + 'login/Post',login,this.httpOptions);
      }
 
   getAll() {

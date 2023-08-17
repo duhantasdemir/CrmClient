@@ -8,6 +8,7 @@ import { PersonelModule } from './personel/personel.module';
 import { LayoutModule } from "./layout/layout.module";
 import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule, LoginModule,
+        AppRoutingModule,
+         LoginModule,
+         FormsModule,
         AdminModule, HttpClientModule,MusteriModule, PersonelModule,LoginModule,
         LayoutModule
     ]

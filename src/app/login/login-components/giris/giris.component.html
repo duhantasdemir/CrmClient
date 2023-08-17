@@ -1,11 +1,10 @@
 <div class="body">
     <div class="hero">
         <div class="form-box">
-            <form id="login" class="input-group">
-                
-                <input type="email" class="input-field" placeholder="E-mail" required>
-                <input type="password" class="input-field" placeholder="Şifre" required>
-                <button type="submit" (click)="login()" [disabled]="isLoading" class="submit-btn">Giriş</button>
+            <form id="login" class="input-group" [formGroup]="profileForm">
+                <input type="email" class="input-field"  formControlName="username" placeholder="E-mail" required />
+                <input type="password" placeholder="Şifre"  formControlName="password"  class="input-field" required />
+                <button  (click)="login()" [disabled]="isLoading" class="submit-btn">Giriş</button>
             </form>
         </div>
     </div>
