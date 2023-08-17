@@ -1,7 +1,7 @@
-<div class="body">
+<!-- <div class="body">
     <div class="hero">
         <div class="form-box">
-            <form id="login" class="input-group" [formGroup]="profileForm">
+            <form id="login" class="input-group">
                 <input type="email" class="input-field"  formControlName="username" placeholder="E-mail" required />
                 <input type="password" placeholder="Şifre"  formControlName="password"  class="input-field" required />
                 <button  (click)="login()" [disabled]="isLoading" class="submit-btn">Giriş</button>
@@ -10,3 +10,38 @@
     </div>
 </div>
 
+ -->
+ <html>
+<head>
+</head>
+<body>
+    <div class="body">
+        <div class="hero">
+            <div class="form-box">
+                <form id="login" class="input-group" onsubmit="return false;">
+                    <input type="username" class="input-field" id="username" placeholder="E-mail" required />
+                    <input type="password" id="password" placeholder="Şifre" class="input-field" required />
+                    <button (click)="login()" id="loginBtn" class="submit-btn">Giriş</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function giris() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "" || password === "") {
+                alert("Lütfen hem kullanıcı adını hem de şifreyi girin.");
+            }else {
+                document.getElementById("loginBtn").disabled = true;
+                setTimeout(function() {
+                    alert("başarıyla oturum açıldı " + username);
+                    document.getElementById("loginBtn").disabled = false;
+                }, 2000);
+            }
+        }
+    </script>
+</body>
+</html>

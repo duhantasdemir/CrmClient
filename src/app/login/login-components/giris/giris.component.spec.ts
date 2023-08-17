@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GirisComponent } from './giris.component';
 
 describe('GirisComponent', () => {
