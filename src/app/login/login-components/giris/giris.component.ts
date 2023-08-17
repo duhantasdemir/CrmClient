@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { girisService } from './giris.service';
 
 @Component({
   selector: 'app-giris',
