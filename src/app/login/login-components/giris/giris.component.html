@@ -1,0 +1,13 @@
+<div class="body">
+    <div class="hero">
+        <div class="form-box">
+            <form id="login" class="input-group">
+                
+                <input #txtEmail type="email" class="input-field" placeholder="E-mail" required>
+                <input #txtPassword type="password" class="input-field" placeholder="Şifre" required>
+                <button type="submit" (click)="login(txtEmail.value, txtPassword.value)" class="submit-btn">Giriş</button>
+            </form>
+        </div>
+    </div>
+</div>
+
