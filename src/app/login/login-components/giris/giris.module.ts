@@ -8,21 +8,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    GirisComponent,
-
+    GirisComponent
   ],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     RouterModule.forChild([
       { path: "", component: GirisComponent}
     ])
-  ],
-  exports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule
   ]
 })
 export class GirisModule {}

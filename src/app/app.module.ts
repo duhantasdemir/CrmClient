@@ -18,8 +18,8 @@ import { FormsModule } from '@angular/forms';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
+        AppRoutingModule, LoginModule,
         AppRoutingModule,
-         LoginModule,
          FormsModule,
         AdminModule, HttpClientModule,MusteriModule, PersonelModule,LoginModule,
         LayoutModule
