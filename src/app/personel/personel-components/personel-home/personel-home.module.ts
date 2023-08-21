@@ -8,7 +8,6 @@ import { TableModule } from 'primeng/table';
 
 @NgModule({
     declarations: [
-        PersonelHomeComponent,
     ],
     imports: [
         CommonModule,TableModule,
