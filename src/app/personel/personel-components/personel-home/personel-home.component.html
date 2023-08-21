@@ -1,74 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Navigation Menu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-    </style>
+    
+    <!-- menübar -->
+    <link rel="stylesheet">
 </head>
 <body>
+    <div class="menu-bar">
+        <a href="#">Anasayfa</a>
+        <a href="#">Demirbaş</a>
+        <a href="#">Çıkış Yap</a>
+    </div>
+</body>
+</html>
+
+
+
+
 <html>
 <html>
 <head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <link rel="stylesheet" >
 </head>
 <body>
-    <div class="container">
-        <table>
+    <!-- tablo -->
+    <div class="table-container">
+        <table class="personnel-table">
             <tr>
                 <th>İsim Soyisim</th>
                 <th>Email</th>
                 <th>Telefon</th>
-                <th>Departman</th>
+                <th>Pozisyon</th>
             </tr>
         </table>
+    </div>
+    <div class="p-col-9">
+        <button (onClick)="postEkle()" class="p-buttonset" pButton pRipple label="Ekle" icon="pi pi-check"></button>
+        <button (onclick)="deletePersonel()"class="p-buttonset" pButton pRipple label="Sil" icon="pi pi-check"></button>
+        <button (onclick)="updatePersonel()"class="p-buttonset" pButton pRipple label="Güncelle" icon="pi pi-check"></button>
+
     </div>
 </body>
 </html>

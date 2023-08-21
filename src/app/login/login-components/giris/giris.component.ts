@@ -13,6 +13,7 @@ export class GirisComponent implements OnInit {
   username! : string;
   password! :string;
   isLoading: boolean = false;
+  profilForm: any;
 
   ngOnInit(): void {
   }
@@ -21,8 +22,9 @@ export class GirisComponent implements OnInit {
   login(email: string, password: string) {
     console.log("E mail" , email);
     console.log("Pass" , password);
+    if (this.profilForm.valid) {
+      this.isLoading = true;
   }
     
-}
-
+  }}
 
