@@ -1,30 +1,44 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, firstValueFrom } from 'rxjs';
-import { login } from './giris';
+import { LoginModel,} from './giris';
 
 @Injectable({ 
   providedIn: 'root'
  })
 export class GirisService {
- httpClient: any;
-// baseUrl : string = "https://localhost:44334";
- baseUrl : string = "https://8cfe-85-99-124-86.ngrok.io";
 
- async login(email: string, password: string ) {
-   const observable: Observable<any> = this.httpClient.post({
-      controller: "users",
-      action: "login",
+  apiUrl = "https://localhost:7288/api/"  //base url = back end link   /api   + controller name
+  constructor(private httpClient:HttpClient) { }
 
-    }, { email, password } )
+  login(loginModel:LoginModel) {
+    return this.httpClient.post(this.apiUrl+"Kullanici/Login",loginModel)
+  }
 
-    await firstValueFrom(observable);
- }
+  // isGirised(){
+  //   if(localStorage.getItem("token")){
+  //     return true;
+  //   }
+  //   else{
+  //     return false;
+  //   }
+  // }
 
- constructor(private http: HttpClient) {}
- CreateUser(email: string, password: string) {
-  const authData:  login  = {email: email, password: password}  
-    this.http.post(this.baseUrl + "/api/Login", authData);   //base url = back end link   /api   + controller name
- }
+//  httpClient: any;
+
+//  async login(email: string, password: string ) {
+//    const observable: Observable<any> = this.httpClient.post({
+//       controller: "users",
+//       action: "login",
+
+//     }, { email, password } )
+
+//     await firstValueFrom(observable)
+//  }
+
+//  constructor(private http: HttpClient) {}
+//  CreateUser(email: string, password: string) {
+//   const authData:  login  = {email: email, password: password}  
+//     this.http.post("", authData);   //base url = back end link   /api   + controller name
+//  }
 }
 

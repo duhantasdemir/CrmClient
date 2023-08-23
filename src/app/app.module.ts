@@ -8,7 +8,8 @@ import { PersonelModule } from './personel/personel.module';
 import { LayoutModule } from "./layout/layout.module";
 import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -18,11 +19,16 @@ import { FormsModule } from '@angular/forms';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule, LoginModule,
+        AppRoutingModule, 
+        LoginModule,
         AppRoutingModule,
-         FormsModule,
-        AdminModule, HttpClientModule,MusteriModule, PersonelModule,LoginModule,
-        LayoutModule
+        FormsModule,
+        AdminModule, 
+        HttpClientModule,
+        MusteriModule, 
+        PersonelModule,
+        LayoutModule,
+        ReactiveFormsModule    
     ]
 })
 export class AppModule { }
