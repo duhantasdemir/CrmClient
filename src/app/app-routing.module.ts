@@ -7,19 +7,19 @@ import { MusteriHomeComponent } from './musteri/musteri-components/musteri-home/
 
 const routes: Routes = [
   {
-    path: "admin", component: AdminHomeComponent,children: [
+    path: "admin", children: [
       { path:"", loadChildren: () => import("./admin/admin-components/admin-home/admin-home.module").then(module => module.AdminHomeModule)}
     ] 
   },
 
   {
-    path: "personel", component: PersonelHomeComponent,children: [
+    path: "personel", children: [
       { path:"", loadChildren: () => import("./personel/personel-components/personel-home/personel-home.module").then(module => module.PersonelHomeModule)}
     ] 
   },
 
   {
-    path: "musteri", component: MusteriHomeComponent,children: [
+    path: "musteri",children: [
       { path:"", loadChildren: () => import("./musteri/musteri-components/musteri-home/musteri-home.module").then(module => module.MusteriHomeModule)},
 
       { path:"istek-kayit", loadChildren: () => import("./musteri/musteri-components/musteri-istek-kayit/musteri-istek-kayit.module").then(module => module.MusteriIstekKayitModule)},
@@ -31,7 +31,7 @@ const routes: Routes = [
   },
 
   {
-    path: "demirbas", component: AdminHomeComponent,children: [
+    path: "demirbas",children: [
       { path:"", loadChildren: () => import("./demirbas/demirbas-components/demirbas-home/demirbas-home.module").then(module => module.DemirbasHomeModule)},
 
       { path:"demirbas-kayit", loadChildren: () => import("./demirbas/demirbas-components/demirbas-kayit/demirbas-kayit.module").then(module => module.DemirbasKayitModule)},
@@ -40,7 +40,7 @@ const routes: Routes = [
     ] 
   },
 
-  { path: "", component: GirisComponent}
+  { path: "", loadChildren: () => import("./login/login-components/giris/giris.module").then(module => module.GirisModule)}
 
 ];
 

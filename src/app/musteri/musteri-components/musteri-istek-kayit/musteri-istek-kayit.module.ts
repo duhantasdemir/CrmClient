@@ -15,6 +15,7 @@ import { ComponentsModule } from 'src/app/layout/components/components.module';
     RouterModule.forChild([
       {path:"", component: MusteriIstekKayitComponent}
     ]),
+    
   ]
 })
 export class MusteriIstekKayitModule { }

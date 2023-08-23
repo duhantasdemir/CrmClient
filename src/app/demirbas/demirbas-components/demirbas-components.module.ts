@@ -6,13 +6,15 @@ import { DemirbasKayitModule } from './demirbas-kayit/demirbas-kayit.module';
 
 
 
+
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
     DemirbasHomeModule,
     DemirbasListeModule,
-    DemirbasKayitModule
+    DemirbasKayitModule,
+
   ]
 })
 export class DemirbasComponentsModule { }
