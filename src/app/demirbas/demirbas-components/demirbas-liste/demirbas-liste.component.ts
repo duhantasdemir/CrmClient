@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DemirbasListeModel } from './demirbas-liste';
 
 
 @Component({
@@ -16,4 +17,8 @@ export class DemirbasListeComponent implements OnInit{
     throw new Error('Method not implemented.');
   }
 
+
+  dlists: DemirbasListeModel[] = [
+    
+  ];
 }

@@ -5,12 +5,11 @@
             <th>Demirbaş Adı</th>
             <th>Demirbaş Türü</th>
             <th>Demirbaş Fiyatı</th>
-            <th>Demirbaş Seri No</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-product>
-        <tr>
-            <td>{{ product.code }}</td>
+        <tr *ngFor="let dlist of dlists">
+            <td>{{ product.adi }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.category }}</td>
             <td>{{ product.quantity }}</td>
