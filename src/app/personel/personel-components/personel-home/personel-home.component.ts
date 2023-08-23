@@ -72,9 +72,9 @@ export class PersonelHomeComponent implements OnInit {
   }
   
 
-  deletePersonel(index: number) {
+  deletePersonel() {
     if (confirm('Silmek istediğinizden emin misiniz?')) {
-      this.personelservice.deletePersonel(index);
+      this.personelservice.deletePersonel(this.selectedIndex);
       this.list = this.personelservice.getAll();
     }}
 

@@ -9,7 +9,6 @@ import { NgForm } from '@angular/forms';
 })
 
 export class GirisComponent implements OnInit {
-<<<<<<< HEAD
   /* model: any= {};
   Email! : string ;
   password! :string ;
@@ -18,16 +17,10 @@ export class GirisComponent implements OnInit {
   password! :string;
   isLoading: boolean = false;
   profilForm: any;
-=======
   constructor(public girisService: GirisService) { }
->>>>>>> 61c6680f9f9e38fcf721ee22afbc61060a287f94
-
   ngOnInit(): void {
     
   }
-
-
-<<<<<<< HEAD
   login(email: string, password: string) {
     console.log("E mail" , email);
     console.log("Pass" , password);
@@ -36,19 +29,9 @@ export class GirisComponent implements OnInit {
   }
     
   }}
-=======
-
-  login(arg0: string,arg1: string){  
+  //login(arg0: string,arg1: string){  
     // if(form.invalid){  
     //   return;  
     // }  
-    console.log("form başarılı");
-    this.girisService.CreateUser(arg0, arg1);  
-  }  
-
-  }
-    
-
-
->>>>>>> 61c6680f9f9e38fcf721ee22afbc61060a287f94
-
+    //console.log("form başarılı");
+    //this.girisService.CreateUser(arg0, arg1);  
