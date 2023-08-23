@@ -9,6 +9,7 @@ import { LayoutModule } from "./layout/layout.module";
 import { LoginModule } from './login/login.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from "./layout/components/components.module";
 
 
 @NgModule({
@@ -19,16 +20,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
-        AppRoutingModule, 
+        AppRoutingModule,
         LoginModule,
         AppRoutingModule,
         FormsModule,
-        AdminModule, 
+        AdminModule,
         HttpClientModule,
-        MusteriModule, 
+        MusteriModule,
         PersonelModule,
         LayoutModule,
-        ReactiveFormsModule    
+        ReactiveFormsModule,
+        ComponentsModule
     ]
 })
 export class AppModule { }

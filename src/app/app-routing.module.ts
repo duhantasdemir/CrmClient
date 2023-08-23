@@ -14,7 +14,9 @@ const routes: Routes = [
 
   {
     path: "personel", children: [
-      { path:"", loadChildren: () => import("./personel/personel-components/personel-home/personel-home.module").then(module => module.PersonelHomeModule)}
+      { path:"", loadChildren: () => import("./personel/personel-components/personel-home/personel-home.module").then(module => module.PersonelHomeModule)},
+
+      { path:"personel-kayit", loadChildren: () => import("./personel/personel-components/personel-kayit/personel-kayit.module").then(module => module.PersonelKayitModule)}
     ] 
   },
 
