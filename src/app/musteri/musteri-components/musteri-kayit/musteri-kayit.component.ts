@@ -31,24 +31,10 @@ export class MusteriKayitComponent implements OnInit{
 
       this.musterikayitService.register(musterikayitModel).subscribe(data=>{
         console.log(data)
-        // this.toastrService.info(response.message)
          
       })
     }
   }
 
-
-//   get component() {
-//     return this.frm.controls;
-//   }
-
-// submitted: boolean = false;
-// onSubmit(musteriModel: MusteriKayitModel) {
-//   this.submitted = true;
-
-//   debugger;
-//   if(this.frm.invalid)
-//   return;
-//   }
   
 }

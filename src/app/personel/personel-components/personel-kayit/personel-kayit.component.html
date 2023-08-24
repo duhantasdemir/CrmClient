@@ -4,11 +4,19 @@
         <div class="form-box">
             <form id="login" class="input-group">
                 <div class="tittle">Personel Kayıt</div>
-                <input type="text" class="input-field" placeholder="Ad" required>
-                <input type="text" class="input-field" placeholder="Soyad" required>
-                <input type="email" class="input-field" placeholder="E-mail" required>
-                <input type="password" class="input-field" placeholder="Şifre" required>
-                <button type="submit" class="submit-btn">Kaydet</button>
+                <input formControlName="Name" type="text" class="input-field" placeholder="Ad" required>
+                <input formControlName="Surname" type="text" class="input-field" placeholder="Soyad" required>
+                <input formControlName="MAdress" type="email" class="input-field" placeholder="E-mail" required>
+                <input formControlName="PersonelCartNo" type="number" class="input-field" placeholder="Personel Cart No" required>
+                <input formControlName="DogumYeri" type="text" class="input-field" placeholder="Doğum Yeri" required>
+                <input formControlName="TCKimlikNo" type="number" class="input-field" placeholder="TC Kimlik No" required>
+                <input formControlName="DogumTarihi" type="number" class="input-field" placeholder="Doğum Tarihi" required>
+                <input formControlName="SigortaSicilNo" type="number" class="input-field" placeholder="Sigorta Sicil No" required>
+                <input formControlName="IseGirisTarihi" type="number" class="input-field" placeholder="İşe Giriş Tarihi" required>
+                <input formControlName="Iban" type="number" class="input-field" placeholder="İban" required>
+                <input formControlName="Maas" type="number" class="input-field" placeholder="Maaş" required>
+                <input formControlName="Password" type="password" class="input-field" placeholder="Şifre" required>
+                <button type="submit" (click)="register()" class="submit-btn">Kaydet</button>
             </form>
         </div>
     </div>

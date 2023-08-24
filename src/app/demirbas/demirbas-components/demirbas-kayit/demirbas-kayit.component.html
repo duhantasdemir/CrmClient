@@ -5,23 +5,23 @@
             <div class="user-details">
                 <div class="input-box">
                     <span class="details">Demirbaş Adı</span>
-                    <input type="text" placeholder="Adı">
+                    <input type="text" formControlName="DemirbasAdi" placeholder="Adı">
                 </div>
                 <div class="input-box">
                     <span class="details">Demirbaş Türü</span>
-                    <input type="text" placeholder="Türü">
+                    <input type="text" formControlName="DemirbasTuru" placeholder="Türü">
                 </div>
                 <div class="input-box">
                     <span class="details">Demirbaş Fiyatı</span>
-                    <input type="text" placeholder="Fiyatı">
+                    <input type="text" formControlName="DemirbasFiyati" placeholder="Fiyatı">
                 </div>
                 <div class="input-box">
                     <span class="details">Demirbaş Seri Numarası</span>
-                    <input type="text" placeholder="Seri No">
+                    <input type="text" formControlName="DemirbasSeriNumarasi" placeholder="Seri No">
                 </div>
             </div>
             <div class="button">
-                <input type="submit" value="Kaydet">
+                <input type="submit" (click)="register()" value="Kaydet">
             </div>
         </form>
     </div>

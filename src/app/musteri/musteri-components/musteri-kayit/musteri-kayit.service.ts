@@ -7,7 +7,7 @@ import {  MusteriKayitModel } from './musteri-kayit';
 })
 export class MusteriKayitService {
 
-  apiUrl = "https://localhost:44334/api/"  //base url = back end link   /api   + controller name
+  apiUrl = "https://localhost:7288/api/"  //base url = back end link   /api   + controller name
   constructor(private httpClient:HttpClient) { }
 
   register(musteriModel: MusteriKayitModel) {
