@@ -1,13 +1,13 @@
 <div class="body">
     <div class="hero">
         <div class="form-box">
-            <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)" id="login" class="input-group">
+            <form [formGroup]="mregisterform"  id="login" class="input-group">
                 <div class="tittle">Müşteri Kayıt</div>
-                <input formControlName="ad" type="text" class="input-field" placeholder="Ad" required>
-                <input formControlName="soyad" type="text" class="input-field" placeholder="Soyad" required>
-                <input formControlName="email" type="email" class="input-field" placeholder="E-mail" required>
-                <input formControlName="sifre" type="password" class="input-field" placeholder="Şifre" required>
-                <button type="submit" class="submit-btn">Kaydet</button>
+                <input formControlName="Name" type="text" class="input-field" placeholder="Ad" required>
+                <input formControlName="Surname" type="text" class="input-field" placeholder="Soyad" required>
+                <input formControlName="MAdress" type="email" class="input-field" placeholder="E-mail" required>
+                <input formControlName="Password" type="password" class="input-field" placeholder="Şifre" required>
+                <button type="submit" (click)="register()" class="submit-btn">Kaydet</button>
             </form>
         </div>
     </div>

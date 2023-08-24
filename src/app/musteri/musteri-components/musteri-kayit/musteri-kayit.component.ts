@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Musteri } from './musteri-kayit';
 import { MusteriKayitService } from './musteri-kayit.service';
+
 
 @Component({
   selector: 'app-musteri-kayit',
@@ -10,31 +10,45 @@ import { MusteriKayitService } from './musteri-kayit.service';
 })
 export class MusteriKayitComponent implements OnInit{
 
-  frm!: FormGroup;
+
+  mregisterform!: FormGroup;
+  toastrService: any;
   constructor(private formBuilder: FormBuilder, private musterikayitService: MusteriKayitService) { }
 
   
   ngOnInit(): void {
-    this.frm = this.formBuilder.group({
+    this.mregisterform = this.formBuilder.group({
       Name: ["" ,Validators.required],
       Surname:["", Validators.required],
       MAdress:["" ,Validators.required],
       Password:["" ,Validators.required]
     })
   }
+  register(){
+    if(this.mregisterform.valid){
+      console.log(this.mregisterform.value)
+      let musterikayitModel = Object.assign({}, this.mregisterform.value)
 
-
-  get component() {
-    return this.frm.controls;
+      this.musterikayitService.register(musterikayitModel).subscribe(data=>{
+        console.log(data)
+        // this.toastrService.info(response.message)
+         
+      })
+    }
   }
 
-submitted: boolean = false;
-onSubmit(musteri: Musteri) {
-  this.submitted = true;
 
-  debugger;
-  if(this.frm.invalid)
-  return;
-  }
+//   get component() {
+//     return this.frm.controls;
+//   }
+
+// submitted: boolean = false;
+// onSubmit(musteriModel: MusteriKayitModel) {
+//   this.submitted = true;
+
+//   debugger;
+//   if(this.frm.invalid)
+//   return;
+//   }
   
 }

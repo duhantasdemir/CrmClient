@@ -1,15 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Musteri } from './musteri-kayit';
+import {  MusteriKayitModel } from './musteri-kayit';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MusteriKayitService {
 
-  constructor(private httpClient: HttpClient) { }
+  apiUrl = "https://localhost:44334/api/"  //base url = back end link   /api   + controller name
+  constructor(private httpClient:HttpClient) { }
 
-  create(musteri: Musteri) {
-
+  register(musteriModel: MusteriKayitModel) {
+    return this.httpClient.post(this.apiUrl+"Musteri/Register",musteriModel)
   }
 }

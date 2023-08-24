@@ -1,4 +1,4 @@
-export class Musteri {
+export class MusteriKayitModel {
     Name!:string;
     Surname!:string;
     MAdress!:string;
